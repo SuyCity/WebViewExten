@@ -1,0 +1,28 @@
+
+<html>
+    <head lanuage="utf-8" />
+    
+    <script type="text/javascript">
+        
+        function getName() {
+            // 有返回值时使用execCmd
+            alert(ctsCmd.execCmd("Test","getName","[]"));
+        }
+    
+        function showName() {
+            // 没返回值的必须使用execVoidCmd
+            ctsCmd.execVoidCmd("Test","showName",JSON.stringify(["Jack"]));
+        }
+    
+    </script>
+    
+    <body>
+        <div style="height:100px"></div>
+        <p>
+            <button style="height:31px" onclick="getName()">getName</button>
+            <br />
+            <button style="margin-top:50px;height:31px" onclick="showName()">showName</button>
+        </p>
+    </body>
+
+</html>
